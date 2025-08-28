@@ -34,11 +34,15 @@ partial class MainForm
         btnBrowseEmulator = new Button();
         txtOutputFolder = new TextBox();
         btnBrowseOutput = new Button();
+        txtArguments = new TextBox();
+        txtSearchQuery = new TextBox();
         btnGenerateShortcuts = new Button();
         lblStatus = new Label();
         lblGamesFolder = new Label();
         lblEmulatorPath = new Label();
         lblOutputFolder = new Label();
+        lblArguments = new Label();
+        lblSearchQuery = new Label();
         SuspendLayout();
         // 
         // lblOutputFolder
@@ -119,12 +123,45 @@ partial class MainForm
         btnBrowseEmulator.UseVisualStyleBackColor = true;
         btnBrowseEmulator.Click += btnBrowseEmulator_Click;
         // 
+        // lblArguments
+        // 
+        lblArguments.AutoSize = true;
+        lblArguments.Location = new Point(12, 180);
+        lblArguments.Name = "lblArguments";
+        lblArguments.Size = new Size(72, 15);
+        lblArguments.TabIndex = 11;
+        lblArguments.Text = "Arguments:";
+        // 
+        // txtArguments
+        // 
+        txtArguments.Location = new Point(12, 198);
+        txtArguments.Name = "txtArguments";
+        txtArguments.Size = new Size(681, 23);
+        txtArguments.TabIndex = 12;
+        // 
+        // lblSearchQuery
+        // 
+        lblSearchQuery.AutoSize = true;
+        lblSearchQuery.Location = new Point(12, 235);
+        lblSearchQuery.Name = "lblSearchQuery";
+        lblSearchQuery.Size = new Size(82, 15);
+        lblSearchQuery.TabIndex = 13;
+        lblSearchQuery.Text = "Icon Search Query:";
+        // 
+        // txtSearchQuery
+        // 
+        txtSearchQuery.Location = new Point(12, 253);
+        txtSearchQuery.Name = "txtSearchQuery";
+        txtSearchQuery.Size = new Size(681, 23);
+        txtSearchQuery.TabIndex = 14;
+        txtSearchQuery.Text = "icon";
+        // 
         // btnGenerateShortcuts
         // 
-        btnGenerateShortcuts.Location = new Point(12, 185);
+        btnGenerateShortcuts.Location = new Point(12, 290);
         btnGenerateShortcuts.Name = "btnGenerateShortcuts";
         btnGenerateShortcuts.Size = new Size(150, 30);
-        btnGenerateShortcuts.TabIndex = 9;
+        btnGenerateShortcuts.TabIndex = 15;
         btnGenerateShortcuts.Text = "Generate Shortcuts";
         btnGenerateShortcuts.UseVisualStyleBackColor = true;
         btnGenerateShortcuts.Click += btnGenerateShortcuts_Click;
@@ -132,19 +169,23 @@ partial class MainForm
         // lblStatus
         // 
         lblStatus.AutoSize = true;
-        lblStatus.Location = new Point(12, 230);
+        lblStatus.Location = new Point(12, 335);
         lblStatus.Name = "lblStatus";
         lblStatus.Size = new Size(42, 15);
-        lblStatus.TabIndex = 10;
+        lblStatus.TabIndex = 16;
         lblStatus.Text = "Ready";
         // 
-        // Form1
+        // MainForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(720, 270);
+        ClientSize = new Size(720, 375);
         Controls.Add(lblStatus);
         Controls.Add(btnGenerateShortcuts);
+        Controls.Add(txtSearchQuery);
+        Controls.Add(lblSearchQuery);
+        Controls.Add(txtArguments);
+        Controls.Add(lblArguments);
         Controls.Add(btnBrowseEmulator);
         Controls.Add(txtEmulatorPath);
         Controls.Add(lblEmulatorPath);
@@ -168,9 +209,13 @@ partial class MainForm
     private Button btnBrowseEmulator;
     private TextBox txtOutputFolder;
     private Button btnBrowseOutput;
+    private TextBox txtArguments;
+    private TextBox txtSearchQuery;
     private Button btnGenerateShortcuts;
     private Label lblStatus;
     private Label lblGamesFolder;
     private Label lblEmulatorPath;
     private Label lblOutputFolder;
+    private Label lblArguments;
+    private Label lblSearchQuery;
 }
