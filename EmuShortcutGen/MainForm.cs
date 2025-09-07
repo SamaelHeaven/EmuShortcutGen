@@ -134,10 +134,10 @@ public partial class MainForm : Form
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(txtEmulatorPath.Text) || !File.Exists(txtEmulatorPath.Text))
+        if (string.IsNullOrWhiteSpace(txtEmulatorPath.Text))
         {
             MessageBox.Show(
-                "Please select a valid emulator executable.",
+                "Please enter an emulator path.",
                 "Error",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error
